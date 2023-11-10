@@ -12,6 +12,7 @@ var client = mqtt.connect('YourMQTT Broker URL', options);
 
 ## Cơ sở dữ liệu
 Database mình sủ dụng là MySql. Trong cơ sở dữ liệu tạo một bảng có tên “sensordata” chứa 4 cột dữ liệu, trong đó ứng với từng dữ liệu thu thập được từ cảm biến: Time,Temp,Humi,DirtHumi
+![Screenshot 2023-11-10 232243](https://github.com/HiepTonight/BTL-IOT-Topic-14/assets/138226695/8c752a4a-2db2-4f73-88e7-9ab6932ca760)
 
 ## Toàn bộ web
 Giao diện chính của Website
