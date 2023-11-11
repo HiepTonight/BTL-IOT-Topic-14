@@ -19,6 +19,7 @@ const int mqtt_port = 8883;
 
 float t = 0;
 float h = 0;
+float dh = 0;
 
 DHT dht(DHTPIN, DHTTYPE);
 WiFiClientSecure espClient;
@@ -100,6 +101,8 @@ void reconnect() {
 void getDHTDataSensor() {
   t = dht.readTemperature();
   h = dht.readHumidity();
+  giatri = analogRead(A0); 
+  dh = map(giatri,0,1023,0,100);
 
   if (isnan(t) || isnan(h)) {
     Serial.println("Khong nhan duoc du lieu tu cam bien DHT11.");
@@ -120,6 +123,7 @@ void displayDataSensor() {
 void sendDataSensor() {
   data["temperature"] = t;
   data["humidity"] = h;
+  data["dirthumi"] = dh;
 
   String jsonString = JSON.stringify(data);
   client.publish("sensormangcambien", jsonString.c_str());
