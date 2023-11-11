@@ -10,11 +10,11 @@
 #define DHTPIN 16
 #define DHTTYPE DHT11
 
-const char* ssid = "QUANGHUNG";
-const char* password = "11092002";
-const char* mqtt_server = "c29a5f079d93431f8d194f09517eb9e9.s1.eu.hivemq.cloud";
-const char* mqtt_username = "mangcambien";
-const char* mqtt_password = "Mangcambien2023";
+const char* ssid = "hieptran";
+const char* password = "12345678";
+const char* mqtt_server = "897e4e4bd28b411ba2464a4019281121.s1.eu.hivemq.cloud";
+const char* mqtt_username = "my_mqtt";
+const char* mqtt_password = "hellomqtt";
 const int mqtt_port = 8883;
 
 float t = 0;
